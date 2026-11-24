@@ -1,0 +1,17 @@
+{
+  "@next/next/no-img-element": 3,
+  "@next/next/no-location-assign-relative-destination": 1,
+  "@typescript-eslint/ban-ts-comment": 24,
+  "@typescript-eslint/no-explicit-any": 236,
+  "@typescript-eslint/no-require-imports": 8,
+  "@typescript-eslint/no-unused-vars": 127,
+  "prefer-const": 8,
+  "react-hooks/exhaustive-deps": 8,
+  "react-hooks/immutability": 12,
+  "react-hooks/purity": 1,
+  "react-hooks/refs": 5,
+  "react-hooks/rules-of-hooks": 1,
+  "react-hooks/set-state-in-effect": 25,
+  "react-hooks/static-components": 2,
+  "react/no-unescaped-entities": 10
+}

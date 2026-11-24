@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --legacy-peer-deps
+      - run: npm run check
+      - name: Build with ephemeral auth secret
+        run: |
+          AUTH_SECRET="$(openssl rand -base64 32)" DATABASE_URL="mysql://root@127.0.0.1:3306/marcflow" npm run build
